@@ -1,4 +1,4 @@
-# Deployig a Ruby AWS Lambda function with MongoDB
+# Deploying a Ruby AWS Lambda function with MongoDB
 
 ## Setup
 
