@@ -6,6 +6,7 @@
 
 ```
 rbenv install 2.7.0
+
 rbenv use 2.7.0
 ```
 
@@ -83,18 +84,26 @@ zip -r layer.zip ruby
 Create the layer in the web console, uploading the layer.zip we created and
 setting the runtime to Ruby 2.7
 
+<img width="865" alt="Create Layer" src="https://user-images.githubusercontent.com/9030/166814767-08721e76-3de0-4c38-878e-213978441a9e.png">
+
 ### Create the function
 
 Create a function with a Ruby 2.7 runtime and change the execution role to the
 existing execution role service-role/LambdaRole
 
+<img width="1346" alt="Create Function" src="https://user-images.githubusercontent.com/9030/166814880-afe9a709-71b7-406f-9f00-c2c0153f6511.png">
+
 ### Add the layer to the function
 
 Use the latest version of the layer, should be 1 in this case.
 
+<img width="859" alt="Add Layer" src="https://user-images.githubusercontent.com/9030/166814996-06830740-3f2f-484f-a804-847390cbcb0b.png">
+
 ### Add the URI Configuration
 
 Add MONGODB_URI env variable to function.
+
+<img width="851" alt="Edit URI" src="https://user-images.githubusercontent.com/9030/166815045-44e384bd-6b27-44b7-a23c-7a2a70d4510b.png">
 
 ### Upload the function Zip
 
