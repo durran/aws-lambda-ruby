@@ -7,8 +7,10 @@ module LambdaFunctions
   if !@client
     @client = Mongo::Client.new(ENV['MONGODB_URI'])
    
-    subscriber = HeartbeatLogSubscriber.new
-    @client.subscribe(Mongo::Monitoring::SERVER_HEARTBEAT, subscriber)
+    heartbeat_subscriber = HeartbeatLogSubscriber.new
+    command_subscriber = CommandLogSubscriber.new
+    @client.subscribe(Mongo::Monitoring::SERVER_HEARTBEAT, heartbeat_subscriber)
+    @client.subscribe(Mongo::Monitoring::COMMAND, command_subscriber)
     
     # We ping here to create the initial connection so the client
     # remains connected in the execution environment.
