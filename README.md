@@ -37,7 +37,7 @@ module LambdaFunctions
     @client = Mongo::Client.new(ENV['MONGODB_URI'])
     # We ping here to create the initial connection so the client
     # remains connected in the execution environment.
-    puts @client.database.command({ ping: 1 }).documents
+    @client.database.command({ ping: 1 })
   end
 
   def client
