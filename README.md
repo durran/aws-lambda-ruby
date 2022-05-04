@@ -4,14 +4,16 @@
 
 ### Install Ruby 2.7.0 (Most recent Lambda Ruby version)
 
+```
 rbenv install 2.7.0
 rbenv use 2.7.0
+```
 
 ### Create a Gemfile in the project and add the mongo dependency
 
 Gemfile:
 
-```
+```ruby
 source 'https://rubygems.org'
 gem 'mongo'
 ```
@@ -24,7 +26,7 @@ bundle install
 
 db.rb:
 
-```
+```ruby
 require 'mongo'
 
 module LambdaFunctions
@@ -47,7 +49,7 @@ The function itself MUST be named lambda_function.rb.
 
 lambda_function.rb:
 
-```
+```ruby
 require 'db'
 require 'json'
 
