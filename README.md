@@ -111,6 +111,8 @@ Add MONGODB_URI env variable to function.
 zip function.zip db.rb lambda_function.rb
 ```
 
+<img width="871" alt="Upload" src="https://user-images.githubusercontent.com/9030/166815381-8920a051-4446-4c3e-984a-afc3ddb55301.png">
+
 ## Profit
 
 Next steps, automate.
