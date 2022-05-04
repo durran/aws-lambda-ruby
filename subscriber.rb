@@ -2,15 +2,15 @@ class HeartbeatLogSubscriber
   include Mongo::Loggable
 
   def started(event)
-    log_debug("#{event.address} | STARTED")
+    log_info("#{event.address} | STARTED")
   end
 
   def succeeded(event)
-    log_debug("#{event.address} | SUCCEEDED | #{event.duration}s")
+    log_info("#{event.address} | SUCCEEDED | #{event.duration}s")
   end
 
   def failed(event)
-    log_debug("#{event.address} | FAILED | #{event.error.class}: #{event.error.message} | #{event.duration}s")
+    log_info("#{event.address} | FAILED | #{event.error.class}: #{event.error.message} | #{event.duration}s")
   end
 
   private
